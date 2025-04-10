@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
 	return (
-		<section className="h-screen flex flex-col items-center justify-center text-center py-20 px-4 bg-gradient-to-b from-indigo-200 to-white">
+		<section className="md:h-screen flex flex-col items-center justify-center text-center py-20 px-4 bg-gradient-to-b from-indigo-200 to-white">
 			<img
 				src="https://img.freepik.com/premium-photo/working-girl-office-work-animated-girl-working-laptop_982269-331.jpg"
 				alt="Profile"
