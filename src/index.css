@@ -2,3 +2,10 @@
 body {
 	background: linear-gradient(to bottom, #9bb7f3, #ffffff) !important;
 }
+
+@theme {
+	--color-primary: #23e5ff;
+	--color-primary-light: #f0fdfa;
+	--color-primary-dark: #171b22;
+	--color-secondary: #0f172a;
+}

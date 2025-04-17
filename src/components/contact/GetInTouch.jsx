@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Contact() {
+const GetInTouch = () => {
 	return (
-		<section id="contact" className="relative py-28 px-6 text-white">
+		<section id="contact" className="relative py-20 px-6 text-white">
 			{/* Background image with overlay */}
 			<div className="absolute inset-0 bg-[url('https://th.bing.com/th/id/OIP.nxcdRqPzmrKGLcR9uBXahQHaDN?w=700&h=304&rs=1&pid=ImgDetMain')] bg-cover bg-center"></div>
 			<div className="absolute inset-0 bg-black opacity-70"></div>
@@ -46,6 +46,6 @@ function Contact() {
 			</div>
 		</section>
 	);
-}
+};
 
-export default Contact;
+export default GetInTouch;

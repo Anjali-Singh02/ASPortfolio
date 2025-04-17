@@ -22,8 +22,8 @@ function Header({ collapsed, setCollapsed }) {
 	return (
 		<>
 			{/* Mobile Toggle Button */}
-			<div className="md:hidden fixed top-0 left-0 right-0 z-40 p-4 flex justify-between items-center bg-indigo-950 text-white">
-				<h1 className="text-xl font-bold">AS</h1>
+			<div className="md:hidden fixed top-0 left-0 right-0 z-40 p-4 flex justify-between items-center bg-primary-dark text-white">
+				<h1 className="text-3xl font-bold">AS</h1>
 				<button onClick={() => setOpen(!open)}>
 					{open ? <IoClose /> : <TbMenu2 />}{' '}
 				</button>
@@ -31,24 +31,24 @@ function Header({ collapsed, setCollapsed }) {
 
 			{/* Mobile Menu */}
 			<div
-				className={`fixed top-0 left-0 h-full w-64 bg-indigo-950 text-white transform transition-transform duration-300 ease-in-out z-50 p-4 ${
+				className={`fixed top-0 left-0 h-full w-64 bg-primary-dark text-white transform transition-transform duration-300 ease-in-out z-50 p-4 ${
 					open ? 'translate-x-0' : '-translate-x-full'
 				} md:hidden`}
 			>
-				<h1 className="text-2xl font-bold mb-8">AS</h1>
+				<h1 className="text-3xl font-bold mb-8">AS</h1>
 				<ul className="space-y-4">
 					{navItems.map((item) => (
-						<li key={item.to}>
+						<li key={item.to} className="text-xl leading-12">
 							<NavLink
 								onClick={() => setOpen(false)}
 								to={item.to}
 								className={({ isActive }) =>
 									isActive
 										? 'underline flex items-center space-x-2'
-										: 'hover:underline flex items-center space-x-2'
+										: 'hover:underline transition flex items-center space-x-2'
 								}
 							>
-								{item.icon}
+								<span className="text-2xl">{item.icon}</span>
 								<span>{item.label}</span>
 							</NavLink>
 						</li>
@@ -58,30 +58,30 @@ function Header({ collapsed, setCollapsed }) {
 
 			{/* Desktop Sidebar */}
 			<aside
-				className={`bg-gray-900 text-white min-h-screen p-4 hidden md:flex flex-col fixed top-0 left-0 z-30 transition-all duration-300 ${
+				className={`bg-primary-dark text-white min-h-screen p-4 hidden md:flex flex-col fixed top-0 left-0 z-30 transition-all duration-300 ${
 					collapsed ? 'w-16' : 'w-64'
 				}`}
 			>
 				<div className="flex justify-between items-center mb-8">
-					{!collapsed && <h1 className="text-2xl font-bold">AS</h1>}
+					{!collapsed && <h1 className="text-3xl font-bold">AS</h1>}
 					<button onClick={() => setCollapsed(!collapsed)}>
 						<BsLayoutTextSidebarReverse size={20} />
 					</button>
 				</div>
 				<ul className="space-y-4">
 					{navItems.map((item) => (
-						<li key={item.to}>
+						<li key={item.to} className="text-xl leading-12">
 							<NavLink
 								to={item.to}
 								className={({ isActive }) =>
-									`${
+									` ${
 										isActive
 											? 'underline'
-											: 'hover:underline'
+											: 'hover:underline transition'
 									} flex items-center space-x-2`
 								}
 							>
-								{item.icon}
+								<span className="text-2xl">{item.icon}</span>
 								{!collapsed && <span>{item.label}</span>}
 							</NavLink>
 						</li>
