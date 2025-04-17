@@ -2,7 +2,7 @@ import React from 'react';
 
 const GetInTouch = () => {
 	return (
-		<section id="contact" className="relative py-20 px-6 text-white">
+		<section className="relative py-20 px-6 text-white">
 			{/* Background image with overlay */}
 			<div className="absolute inset-0 bg-[url('https://th.bing.com/th/id/OIP.nxcdRqPzmrKGLcR9uBXahQHaDN?w=700&h=304&rs=1&pid=ImgDetMain')] bg-cover bg-center"></div>
 			<div className="absolute inset-0 bg-black opacity-70"></div>
@@ -38,7 +38,7 @@ const GetInTouch = () => {
 					></textarea>
 					<button
 						type="submit"
-						className="mt-6 bg-indigo-600 hover:bg-indigo-700 transition px-6 py-3 rounded text-white font-semibold shadow-md"
+						className="mt-6 bg-primary hover:bg-primary-dark transition-all  px-6 py-3 rounded text-primary-dark  hover:text-white font-semibold shadow-md"
 					>
 						Send Message
 					</button>

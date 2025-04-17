@@ -4,8 +4,19 @@ body {
 }
 
 @theme {
-	--color-primary: #23e5ff;
+	--color-primary: #75dddd;
 	--color-primary-light: #f0fdfa;
-	--color-primary-dark: #171b22;
+	--color-primary-dark: #172a3a;
 	--color-secondary: #0f172a;
+}
+
+::-webkit-scrollbar {
+	width: 8px !important;
+	height: 8px !important;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #75dddd;
+}
+::-webkit-scrollbar-track {
+	background-color: #fff;
 }

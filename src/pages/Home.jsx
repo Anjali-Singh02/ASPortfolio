@@ -34,7 +34,10 @@ function Home() {
 	return (
 		<>
 			{/* Hero */}
-			<section className="relative py-64 px-4 text-center text-white">
+			<section
+				id="home"
+				className="relative py-64 px-4 text-center text-white"
+			>
 				<div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center opacity-90"></div>
 				<div className="absolute inset-0 bg-black opacity-75"></div>
 				<div className="relative z-10 flex flex-col items-center justify-center">
@@ -46,7 +49,7 @@ function Home() {
 					<h1 className="text-3xl md:text-6xl font-bold capitalize mb-2">
 						Hello, I'm Anjali Singh
 					</h1>
-					<h2 className="text-3xl md:text-6xl font-bold capitalize text-indigo-200 mb-4">
+					<h2 className="text-3xl md:text-6xl font-bold capitalize text-primary mb-4">
 						Frontend Developer
 					</h2>
 					<p className="text-lg max-w-xl mb-6 text-gray-200">
@@ -56,13 +59,13 @@ function Home() {
 					<div className="flex gap-6">
 						<Link
 							to="/resume.pdf"
-							className="bg-indigo-600 capitalize hover:bg-white text-white hover:text-indigo-800  font-semibold py-2 px-6 rounded shadow transition"
+							className="bg-primary-dark capitalize hover:bg-white text-white hover:text-primary-dark  font-semibold py-2 px-6 rounded shadow transition"
 						>
 							Download Resume
 						</Link>
 						<Link
 							to="/contact"
-							className="bg-white capitalize hover:bg-indigo-800 text-indigo-600  hover:text-white font-semibold py-2 px-6 rounded shadow transition"
+							className="bg-white capitalize hover:bg-primary-dark text-primary-dark  hover:text-white font-semibold py-2 px-6 rounded shadow transition"
 						>
 							Let's connect
 						</Link>
@@ -71,8 +74,8 @@ function Home() {
 			</section>
 
 			{/* About */}
-			<section className="bg-white py-16 px-6 text-center">
-				<h2 className="text-3xl font-semibold text-indigo-900 mb-4">
+			<section id="about" className="bg-white py-16 px-6 text-center">
+				<h2 className="text-3xl font-semibold text-primary-dark mb-4">
 					About Me
 				</h2>
 				<p className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
@@ -86,8 +89,11 @@ function Home() {
 			</section>
 
 			{/* Projects */}
-			<section className="bg-gray-50 py-16 px-6 text-center">
-				<h2 className="text-3xl font-semibold text-indigo-900 mb-4">
+			<section
+				id="projects"
+				className="bg-gray-50 py-16 px-6 text-center"
+			>
+				<h2 className="text-3xl font-semibold text-primary-dark mb-4">
 					Projects
 				</h2>
 				<p className="text-gray-600 mb-10">
@@ -106,7 +112,7 @@ function Home() {
 								className="w-full h-48 object-cover"
 							/>
 							<div className="p-4">
-								<h3 className="text-xl font-semibold text-indigo-700 mb-2">
+								<h3 className="text-xl font-semibold text-primary-dark mb-2">
 									{proj.title}
 								</h3>
 								<p className="text-gray-700">{proj.desc}</p>
@@ -117,15 +123,15 @@ function Home() {
 			</section>
 
 			{/* Skills */}
-			<section className="bg-white py-16 px-6 text-center">
-				<h2 className="text-3xl font-semibold text-indigo-900 mb-6">
+			<section id="skills" className="bg-white py-16 px-6 text-center">
+				<h2 className="text-3xl font-semibold text-primary-dark mb-6">
 					Skills
 				</h2>
 				<div className="flex flex-wrap justify-center gap-4">
 					{skills.map((skill, index) => (
 						<span
 							key={index}
-							className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm"
+							className="bg-primary-dark text-white px-4 py-2 rounded-full text-sm font-medium shadow-sm"
 						>
 							{skill}
 						</span>
@@ -134,7 +140,7 @@ function Home() {
 			</section>
 
 			{/* Contact */}
-			<div className="bg-white">
+			<div id="contact" className="bg-white">
 				<GetInTouch />
 			</div>
 		</>
