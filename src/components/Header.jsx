@@ -9,9 +9,8 @@ import { GrProjects } from 'react-icons/gr';
 import { IoMailOutline } from 'react-icons/io5';
 import { BsLayoutTextSidebarReverse } from 'react-icons/bs';
 import Footer from './Footer';
-function Header() {
+function Header({ collapsed, setCollapsed }) {
 	const [open, setOpen] = useState(false);
-	const [collapsed, setCollapsed] = useState(false);
 
 	const navItems = [
 		{ to: '/', label: 'Home', icon: <IoHomeOutline /> },
@@ -24,7 +23,7 @@ function Header() {
 		<>
 			{/* Mobile Toggle Button */}
 			<div className="md:hidden fixed top-0 left-0 right-0 z-40 p-4 flex justify-between items-center bg-indigo-950 text-white">
-				<h1 className="text-xl font-bold">Your Name</h1>
+				<h1 className="text-xl font-bold">AS</h1>
 				<button onClick={() => setOpen(!open)}>
 					{open ? <IoClose /> : <TbMenu2 />}{' '}
 				</button>
@@ -36,7 +35,7 @@ function Header() {
 					open ? 'translate-x-0' : '-translate-x-full'
 				} md:hidden`}
 			>
-				<h1 className="text-2xl font-bold mb-8">Your Name</h1>
+				<h1 className="text-2xl font-bold mb-8">AS</h1>
 				<ul className="space-y-4">
 					{navItems.map((item) => (
 						<li key={item.to}>
