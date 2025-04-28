@@ -9,6 +9,17 @@ import {
 	AiOutlineSmile,
 } from 'react-icons/ai';
 import { FiDownload, FiExternalLink } from 'react-icons/fi';
+import { MdConnectWithoutContact } from 'react-icons/md';
+import {
+	FaDatabase,
+	FaFigma,
+	FaGitAlt,
+	FaHtml5,
+	FaNodeJs,
+	FaReact,
+} from 'react-icons/fa6';
+import { SiAxios } from 'react-icons/si';
+import { FaJsSquare } from 'react-icons/fa';
 
 const projectList = [
 	{
@@ -88,213 +99,287 @@ function Home() {
 						{/* Let's Connect Button */}
 						<a
 							href="#contact"
-							className="bg-white capitalize hover:bg-primary-dark text-primary-dark hover:text-white font-semibold py-2 px-6 rounded shadow transition"
+							className="flex items-center gap-2 bg-white capitalize hover:bg-primary-dark text-primary-dark hover:text-white font-semibold py-2 px-6 rounded shadow transition"
 						>
+							<MdConnectWithoutContact className="w-5 h-5" />
 							Let's connect
 						</a>
 					</div>
 				</div>
 			</section>
-
 			{/* About */}
-			<section id="about" className="bg-white py-16 px-6">
-				<h2 className="text-4xl font-extrabold text-primary-dark text-center mb-12">
-					About Me
-				</h2>
+			<section
+				id="about"
+				className="bg-gradient-to-b from-white to-gray-100 py-20 px-6 sm:px-8"
+			>
+				<div className="max-w-6xl mx-auto">
+					{/* Heading */}
+					<h2 className="text-4xl font-extrabold text-primary-dark text-center mb-20">
+						About Me
+					</h2>
 
-				<div className="flex flex-col mb-10 bg-primary-dark text-white items-center p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
-					<AiOutlineUser className="w-12 h-12 text-white mb-4 " />
-					<h3 className="text-2xl font-semibold mb-2">Who I Am</h3>
-					<p className="text-white text-center">
-						Passionate React Developer with UI design expertise and
-						1 year of experience in crafting high-performance,
-						user-centric applications. Proficient in front-end
-						technologies, responsive design, and UX principles.
-						Enthusiastic about building impactful projects and
-						continuously enhancing technical proficiency.
-					</p>
-				</div>
-				<div className="max-w-6xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-					{/* Profile Card */}
+					{/* Timeline Container */}
+					<div className="relative">
+						{/* Center Vertical Line */}
+						<div className="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-dark"></div>
 
-					{/* Skills Card */}
-					<div className="bg-primary p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
-						<div className="flex items-center mb-4">
-							<AiOutlineCode className="w-10 h-10 text-primary-dark mr-3" />
-							<h3 className="text-2xl font-semibold">Skills</h3>
+						{/* Timeline Items */}
+
+						{/* Who I Am (Left) */}
+						<div className="mb-20 flex flex-col md:flex-row items-center md:justify-start relative">
+							<div className="md:w-1/2 md:pr-12 text-center md:text-right">
+								<div className="inline-block bg-primary-dark p-4 rounded-full text-white mb-6">
+									<AiOutlineUser className="w-8 h-8" />
+								</div>
+								<h3 className="text-2xl font-semibold mb-2">
+									Who I Am
+								</h3>
+								<p className="text-gray-700 text-base leading-relaxed max-w-md mx-auto md:mr-0">
+									Passionate React Developer with UI design
+									expertise and 1 year of experience crafting
+									high-performance, user-centric applications.
+									Enthusiastic about impactful projects and
+									continuous learning.
+								</p>
+							</div>
+							<div className="hidden md:block md:w-1/2"></div>
 						</div>
-						<ul className="list-disc list-inside text-gray-700 space-y-2">
-							<li>
-								<strong>Frontend:</strong> React.js, Redux
-								Toolkit, React Router, ES6/ES5, HTML5, CSS3,
-								Bootstrap, Tailwind CSS, Material UI
-							</li>
-							<li>
-								<strong>Backend:</strong> Express.js, Node.js
-								(Basics)
-							</li>
-							<li>
-								<strong>API & Auth:</strong> Axios, JSON Web
-								Tokens (JWT), RESTful APIs
-							</li>
-							<li>
-								<strong>Database:</strong> MongoDB, SQL, MySQL
-							</li>
-							<li>
-								<strong>Version Control:</strong> Git, GitHub
-							</li>
-							<li>
-								<strong>UI Design:</strong> Figma, Wireframing,
-								Prototyping
-							</li>
-							<li>
-								<strong>Tools:</strong> PowerPoint, Excel
-							</li>
-							<li>
-								<strong>Languages:</strong> English & Hindi
-							</li>
-						</ul>
-					</div>
 
-					{/* Experience Card */}
-					<div className="bg-primary p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
-						<div className="flex items-center mb-4">
-							<AiOutlineExperiment className="w-10 h-10 text-primary-dark mr-3" />
-							<h3 className="text-2xl font-semibold">
-								Experience
-							</h3>
-						</div>
-						<div className="text-gray-700 space-y-4">
-							<div>
-								<h4 className="font-semibold">
+						{/* Experience (Right) */}
+						<div className="mb-20 flex flex-col md:flex-row items-center md:justify-end relative">
+							<div className="hidden md:block md:w-1/2"></div>
+							<div className="md:w-1/2 md:pl-12 text-center md:text-left">
+								<div className="inline-block bg-primary-dark p-4 rounded-full text-white mb-6">
+									<AiOutlineExperiment className="w-8 h-8" />
+								</div>
+								<h3 className="text-2xl font-semibold mb-2">
+									Experience
+								</h3>
+								<h4 className="font-bold text-primary-dark">
 									Menteechain Consultancy
 								</h4>
-								<p className="italic text-sm mb-1">
-									Frontend Developer, June 2023 – May 2024
+								<p className="italic text-sm mb-2">
+									Frontend Developer (June 2023 – May 2024)
 								</p>
-								<ul className="list-disc list-inside space-y-1">
+								<ul className="list-disc list-inside text-gray-700 text-base space-y-1 max-w-md mx-auto md:mx-0">
 									<li>
-										Developed and optimized user-facing
-										features using React.js.
+										Developed optimized features using
+										React.js.
 									</li>
 									<li>
-										Translated UI/UX designs into
-										responsive, accessible interfaces.
+										Translated UI/UX designs into responsive
+										interfaces.
 									</li>
 									<li>
-										Integrated UI components with backend
-										RESTful APIs.
+										Integrated frontend with backend APIs.
 									</li>
 									<li>
-										Ensured cross-browser compatibility and
-										performance tuning.
+										Performance tuning and cross-browser
+										compatibility.
 									</li>
 								</ul>
 							</div>
 						</div>
-					</div>
 
-					{/* Education Card */}
-					<div className="bg-primary text-primary-dark p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
-						<div className="flex items-center mb-4">
-							<AiOutlineBook className="w-10 h-10 text-primary-dark mr-3" />
-							<h3 className="text-2xl font-semibold">
-								Education
-							</h3>
-						</div>
-						<div className="text-primary-dark space-y-4">
-							<div>
-								<h4 className="font-semibold">UpGrad Campus</h4>
-								<p className="italic text-sm mb-1">
-									Full Stack Web Development, Aug 2022 – Jul
-									2023, Bengaluru
-								</p>
-								<p>
-									- Mastered React.js, Redux, Node.js,
-									Express.js & MongoDB; hands-on with Git &
-									CI/CD.
-								</p>
+						{/* Education (Left) */}
+						<div className="mb-20 flex flex-col md:flex-row items-center md:justify-start relative">
+							<div className="md:w-1/2 md:pr-12 text-center md:text-right">
+								<div className="inline-block bg-primary-dark p-4 rounded-full text-white mb-6">
+									<AiOutlineBook className="w-8 h-8" />
+								</div>
+								<h3 className="text-2xl font-semibold mb-2">
+									Education
+								</h3>
+								<div className="text-gray-700 space-y-4 text-base max-w-md mx-auto md:mr-0">
+									<div>
+										<h4 className="font-bold">
+											UpGrad Campus
+										</h4>
+										<p className="italic text-sm">
+											Full Stack Web Development (Aug 2022
+											– Jul 2023)
+										</p>
+										<p>
+											Mastered React.js, Redux, Node.js,
+											MongoDB, Git, and CI/CD pipelines.
+										</p>
+									</div>
+									<div>
+										<h4 className="font-bold">
+											Kamla Nehru College, RTMNU
+										</h4>
+										<p className="italic text-sm">
+											BCA (Jun 2019 – Jun 2022)
+										</p>
+									</div>
+								</div>
 							</div>
-							<div>
-								<h4 className="font-semibold">
-									Kamla Nehru College, RTMNU
-								</h4>
-								<p className="italic text-sm">
-									BCA, Jun 2019 – Jun 2022, Nagpur
-								</p>
-							</div>
+							<div className="hidden md:block md:w-1/2"></div>
 						</div>
-					</div>
 
-					{/* Hobbies Card */}
-					<div className="bg-primary p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
-						<div className="flex items-center mb-4">
-							<AiOutlineSmile className="w-10 h-10 text-primary-dark mr-3" />
-							<h3 className="text-2xl font-semibold">Hobbies</h3>
+						{/* Hobbies (Right) */}
+						<div className="flex flex-col md:flex-row items-center md:justify-end relative">
+							<div className="hidden md:block md:w-1/2"></div>
+							<div className="md:w-1/2 md:pl-12 text-center md:text-left">
+								<div className="inline-block bg-primary-dark p-4 rounded-full text-white mb-6">
+									<AiOutlineSmile className="w-8 h-8" />
+								</div>
+								<h3 className="text-2xl font-semibold mb-2">
+									Hobbies
+								</h3>
+								<ul className="list-disc list-inside text-gray-700 text-base space-y-1 max-w-md mx-auto md:mx-0">
+									<li>UI/UX Design and Prototyping</li>
+									<li>Exploring Frontend Tools</li>
+									<li>Crafting & DIY Projects</li>
+									<li>Reading Tech Blogs</li>
+									<li>Nature Walks and Fitness</li>
+									<li>Traveling and Exploring Cultures</li>
+								</ul>
+							</div>
 						</div>
-						<ul className="list-disc list-inside text-gray-700 space-y-2">
-							<li>UI/UX Design and Prototyping</li>
-							<li>Exploring new Frontend Tools and Libraries</li>
-							<li>Crafting and DIY projects</li>
-							<li>Reading tech blogs and books</li>
-							<li>Nature walks and fitness activities</li>
-							<li>Traveling and exploring new cultures</li>
-						</ul>
 					</div>
 				</div>
 			</section>
-
 			{/* Projects */}
 			<section
 				id="projects"
-				className="bg-gray-50 py-16 px-6 text-center"
+				className="bg-gradient-to-b from-gray-50 to-white py-20 px-6"
 			>
-				<h2 className="text-3xl font-semibold text-primary-dark mb-4">
-					Projects
-				</h2>
-				<p className="text-gray-600 mb-10">
-					A selection of my recent work showcasing my development
-					skills.
-				</p>
-				<div className="container mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-					{projectList.map((proj, idx) => (
-						<div
-							key={idx}
-							className="border rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition"
-						>
-							<img
-								src={proj.image}
-								alt={proj.title}
-								className="w-full h-48 object-cover"
-							/>
-							<div className="p-4">
-								<h3 className="text-xl font-semibold text-primary-dark mb-2">
-									{proj.title}
-								</h3>
-								<p className="text-gray-700">{proj.desc}</p>
+				<div className="max-w-7xl mx-auto text-center">
+					<h2 className="text-4xl font-extrabold text-primary-dark mb-6">
+						Projects
+					</h2>
+					<p className="text-gray-600 mb-14 max-w-2xl mx-auto">
+						A collection of work showcasing my frontend skills,
+						UI/UX sense, and creativity.
+					</p>
+
+					{/* Projects Grid */}
+					<div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+						{projectList.map((proj, idx) => (
+							<div
+								key={idx}
+								className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer hover:shadow-2xl transition-all duration-300"
+							>
+								{/* Image */}
+								<img
+									src={proj.image}
+									alt={proj.title}
+									className="w-full h-60 object-cover transform group-hover:scale-110 transition-transform duration-500"
+								/>
+
+								{/* Overlay */}
+								<div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-150 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-6">
+									<h3 className="text-2xl font-bold text-white mb-2">
+										{proj.title}
+									</h3>
+									<p className="text-gray-200 text-sm">
+										{proj.desc}
+									</p>
+								</div>
 							</div>
-						</div>
-					))}
+						))}
+					</div>
 				</div>
 			</section>
 
 			{/* Skills */}
-			<section id="skills" className="bg-white py-16 px-6 text-center">
-				<h2 className="text-3xl font-semibold text-primary-dark mb-6">
-					Skills
-				</h2>
-				<div className="flex flex-wrap justify-center gap-4">
-					{skills.map((skill, index) => (
-						<span
-							key={index}
-							className="bg-primary-dark text-white px-4 py-2 rounded-full text-sm font-medium shadow-sm"
-						>
-							{skill}
-						</span>
-					))}
+			<section id="skills" className="bg-gray-100 py-16 px-6">
+				<div className="max-w-6xl mx-auto text-center">
+					<h2 className="text-3xl font-semibold text-primary-dark mb-10">
+						Skills
+					</h2>
+
+					<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+						{/* Frontend */}
+						<div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+							<FaReact className="text-4xl text-blue-500 mx-auto mb-4" />
+							<h4 className="text-lg font-semibold mb-2">
+								Frontend
+							</h4>
+							<p className="text-gray-600 text-sm">
+								React.js, Redux Toolkit, React Router, HTML5,
+								CSS3, ES6, Bootstrap, Tailwind CSS, Material UI
+							</p>
+						</div>
+
+						{/* Backend */}
+						<div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+							<FaNodeJs className="text-4xl text-green-600 mx-auto mb-4" />
+							<h4 className="text-lg font-semibold mb-2">
+								Backend
+							</h4>
+							<p className="text-gray-600 text-sm">
+								Node.js (Basics), Express.js
+							</p>
+						</div>
+
+						{/* APIs & Authentication */}
+						<div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+							<SiAxios className="text-4xl text-indigo-500 mx-auto mb-4" />
+							<h4 className="text-lg font-semibold mb-2">
+								APIs & Authentication
+							</h4>
+							<p className="text-gray-600 text-sm">
+								Axios, JSON Web Tokens (JWT), RESTful APIs
+							</p>
+						</div>
+
+						{/* Database */}
+						<div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+							<FaDatabase className="text-4xl text-yellow-500 mx-auto mb-4" />
+							<h4 className="text-lg font-semibold mb-2">
+								Database
+							</h4>
+							<p className="text-gray-600 text-sm">
+								MongoDB, MySQL, SQL
+							</p>
+						</div>
+
+						{/* Version Control */}
+						<div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+							<FaGitAlt className="text-4xl text-red-500 mx-auto mb-4" />
+							<h4 className="text-lg font-semibold mb-2">
+								Version Control
+							</h4>
+							<p className="text-gray-600 text-sm">Git, GitHub</p>
+						</div>
+
+						{/* UI/UX Design */}
+						<div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+							<FaFigma className="text-4xl text-pink-500 mx-auto mb-4" />
+							<h4 className="text-lg font-semibold mb-2">
+								UI/UX Design
+							</h4>
+							<p className="text-gray-600 text-sm">
+								Figma, Wireframing, Prototyping
+							</p>
+						</div>
+
+						{/* Tools */}
+						<div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+							<FaJsSquare className="text-4xl text-yellow-400 mx-auto mb-4" />
+							<h4 className="text-lg font-semibold mb-2">
+								Tools
+							</h4>
+							<p className="text-gray-600 text-sm">
+								PowerPoint, Excel
+							</p>
+						</div>
+
+						{/* Languages */}
+						<div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+							<FaHtml5 className="text-4xl text-orange-500 mx-auto mb-4" />
+							<h4 className="text-lg font-semibold mb-2">
+								Languages
+							</h4>
+							<p className="text-gray-600 text-sm">
+								Fluent in English & Hindi
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
-
 			{/* Contact */}
 			<div id="contact" className="bg-white">
 				<GetInTouch />
