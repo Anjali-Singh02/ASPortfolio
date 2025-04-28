@@ -20,7 +20,7 @@ import {
 } from 'react-icons/fa6';
 import { SiAxios } from 'react-icons/si';
 import { FaJsSquare } from 'react-icons/fa';
-
+import { motion } from 'framer-motion';
 const projectList = [
 	{
 		title: 'Portfolio Website',
@@ -241,48 +241,56 @@ function Home() {
 				</div>
 			</section>
 			{/* Projects */}
+
 			<section
 				id="projects"
-				className="bg-gradient-to-b from-gray-50 to-white py-20 px-6"
+				className="bg-gradient-to-b from-gray-100 to-white py-20 px-6"
 			>
 				<div className="max-w-7xl mx-auto text-center">
-					<h2 className="text-4xl font-extrabold text-primary-dark mb-6">
+					<h2 className="text-4xl font-extrabold text-primary-dark mb-8">
 						Projects
 					</h2>
-					<p className="text-gray-600 mb-14 max-w-2xl mx-auto">
-						A collection of work showcasing my frontend skills,
-						UI/UX sense, and creativity.
+					<p className="text-gray-600 mb-16 max-w-2xl mx-auto">
+						Explore some of the impactful projects I've crafted,
+						combining design and development expertise.
 					</p>
 
 					{/* Projects Grid */}
 					<div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
 						{projectList.map((proj, idx) => (
-							<div
+							<motion.div
 								key={idx}
-								className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer hover:shadow-2xl transition-all duration-300"
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								initial={{ opacity: 0, y: 50 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.6, ease: 'easeOut' }}
+								className="bg-white/40 backdrop-blur-md border border-gray-200 shadow-lg rounded-2xl overflow-hidden flex flex-col justify-between hover:shadow-2xl transition-all"
 							>
 								{/* Image */}
-								<img
-									src={proj.image}
-									alt={proj.title}
-									className="w-full h-60 object-cover transform group-hover:scale-110 transition-transform duration-500"
-								/>
+								<div className="overflow-hidden">
+									<img
+										src={proj.image}
+										alt={proj.title}
+										className="w-full h-52 object-cover hover:scale-110 transition-transform duration-500"
+									/>
+								</div>
 
-								{/* Overlay */}
-								<div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-150 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-6">
-									<h3 className="text-2xl font-bold text-white mb-2">
+								{/* Content */}
+								<div className="p-6 flex flex-col flex-grow">
+									<h3 className="text-2xl font-semibold text-primary-dark mb-3">
 										{proj.title}
 									</h3>
-									<p className="text-gray-200 text-sm">
+									<p className="text-gray-700 mb-4 flex-grow">
 										{proj.desc}
 									</p>
 								</div>
-							</div>
+							</motion.div>
 						))}
 					</div>
 				</div>
 			</section>
-
 			{/* Skills */}
 			<section id="skills" className="bg-gray-100 py-16 px-6">
 				<div className="max-w-6xl mx-auto text-center">
