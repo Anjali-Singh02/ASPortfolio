@@ -28,11 +28,11 @@ function Header({ collapsed, setCollapsed }) {
 	return (
 		<>
 			{/* Mobile Toggle Button */}
-			<div className="md:hidden fixed top-0 left-0 right-0 z-40 p-4 flex justify-between items-center bg-primary-dark text-white">
+			<div className="md:hidden fixed top-0 left-0 right-0 z-40 p-4 flex justify-between items-center bg-primary-dark text-white transition-all duration-300">
 				<h1 className="text-3xl font-bold">AS</h1>
 				<button
 					onClick={() => setOpen(!open)}
-					className="cursor-pointer"
+					className="cursor-pointer transition-all duration-300"
 				>
 					{open ? <IoClose /> : <TbMenu2 />}
 				</button>

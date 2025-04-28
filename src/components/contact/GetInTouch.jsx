@@ -1,4 +1,7 @@
 import React from 'react';
+import { AiOutlineLinkedin } from 'react-icons/ai';
+import { FaLinkedinIn, FaMailchimp } from 'react-icons/fa6';
+import { MdOutlineEmail } from 'react-icons/md';
 
 const GetInTouch = () => {
 	return (
@@ -38,12 +41,26 @@ const GetInTouch = () => {
 					></textarea>
 					<button
 						type="submit"
-						className="mt-6 bg-primary hover:bg-primary-dark transition-all  px-6 py-3 rounded text-primary-dark  hover:text-white font-semibold shadow-md"
+						className="mt-6 bg-primary hover:bg-primary-dark transition-all  px-6 py-3 rounded text-primary-dark  hoveg5rer:text-white font-semibold shadow-md"
 					>
 						Send Message
 					</button>
 				</form>
 			</div>
+			<footer className="bg-primary-dark text-white text-center p-4 ">
+				<div className="flex items-center justify-center gap-4 mt-6">
+					<span>
+						<AiOutlineLinkedin className="text-[25px] hover:scale-105 cursor-pointer hover:text-primary" />
+					</span>
+					<span>
+						<MdOutlineEmail className="text-[25px] hover:scale-105 cursor-pointer hover:text-primary" />
+					</span>
+				</div>
+				<p>
+					&copy; {new Date().getFullYear()} Your Name. All rights
+					reserved.
+				</p>
+			</footer>
 		</section>
 	);
 };
