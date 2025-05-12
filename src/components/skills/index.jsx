@@ -15,7 +15,7 @@ const skills = [
 		Icon: FaReact,
 		title: 'Frontend',
 		description:
-			'React.js, Redux Toolkit, React Router, HTML5, CSS3, ES6, Bootstrap, Tailwind CSS, Material UI',
+			'React.js, Redux Toolkit, React Router, HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS, Material UI',
 		iconColor: 'text-blue-500',
 		textColor: 'text-gray-600',
 	},
@@ -59,13 +59,6 @@ const skills = [
 		title: 'Tools',
 		description: 'PowerPoint, Excel',
 		iconColor: 'text-yellow-400',
-		textColor: 'text-gray-600',
-	},
-	{
-		Icon: FaHtml5,
-		title: 'Languages',
-		description: 'Fluent in English & Hindi',
-		iconColor: 'text-orange-500',
 		textColor: 'text-gray-600',
 	},
 ];

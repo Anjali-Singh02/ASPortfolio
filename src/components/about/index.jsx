@@ -1,4 +1,5 @@
 import React from 'react';
+// Importing necessary icons from react-icons
 import {
 	AiOutlineUser,
 	AiOutlineExperiment,
@@ -6,6 +7,7 @@ import {
 	AiOutlineSmile,
 } from 'react-icons/ai';
 
+// Define the timeline items that represent different sections of the About page
 const timelineItems = [
 	{
 		title: 'Who I Am',
@@ -83,19 +85,23 @@ const timelineItems = [
 	},
 ];
 
+// Main About component
 const About = () => {
 	return (
 		<div className="max-w-6xl mx-auto">
+			{/* Heading for the section */}
 			<h2 className="text-4xl font-extrabold text-primary-dark text-center mb-20">
 				About Me
 			</h2>
 
 			<div className="relative">
-				{/* Center Vertical Line */}
+				{/* Center vertical timeline line visible on medium screens and above */}
 				<div className="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-dark"></div>
 
+				{/* Map over timeline items to create timeline blocks */}
 				{timelineItems.map((item, index) => {
-					const isLeft = item.position === 'left';
+					const isLeft = item.position === 'left'; // Determine item alignment
+
 					return (
 						<div
 							key={index}
@@ -103,28 +109,39 @@ const About = () => {
 								isLeft ? 'md:justify-start' : 'md:justify-end'
 							} relative`}
 						>
+							{/* Render left-aligned item */}
 							{isLeft && (
 								<div className="md:w-1/2 md:pr-12 text-center md:text-right">
+									{/* Icon with background circle */}
 									<div className="inline-block bg-primary-dark p-4 rounded-full text-white mb-6 mx-auto md:mx-0">
 										{item.icon}
 									</div>
+									{/* Section title */}
 									<h3 className="text-2xl font-semibold mb-2">
 										{item.title}
 									</h3>
+									{/* Section content */}
 									<div className="max-w-md mx-auto md:mr-0">
 										{item.content}
 									</div>
 								</div>
 							)}
+
+							{/* Empty space to balance layout on medium+ screens */}
 							<div className="hidden md:block md:w-1/2"></div>
+
+							{/* Render right-aligned item */}
 							{!isLeft && (
 								<div className="md:w-1/2 md:pl-12 text-center md:text-left">
+									{/* Icon with background circle */}
 									<div className="inline-block bg-primary-dark p-4 rounded-full text-white mb-6 mx-auto md:mx-0">
 										{item.icon}
 									</div>
+									{/* Section title */}
 									<h3 className="text-2xl font-semibold mb-2">
 										{item.title}
 									</h3>
+									{/* Section content */}
 									<div className="max-w-md mx-auto md:ml-0">
 										{item.content}
 									</div>

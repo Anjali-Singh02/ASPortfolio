@@ -1,6 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa6';
+import { motion } from 'framer-motion'; // Importing framer-motion for animations
+import { FaGithub } from 'react-icons/fa6'; // GitHub icon from react-icons
+
+// Import images for projects
 import portfolioImg from '../../../public/portfolio.png';
 import stuTeacherBooking from '../../../public/stTeBk.png';
 import event from '../../../public/event.png';
@@ -8,6 +10,8 @@ import blogpost from '../../../public/blogpost.png';
 import ecomm from '../../../public/ecomm.png';
 import school from '../../../public/school.png';
 import hospitalImg from '../../../public/hospitalImg.png';
+
+// List of projects to display
 const projectList = [
 	{
 		title: 'Student-Teacher Booking System',
@@ -47,20 +51,22 @@ const projectList = [
 	{
 		title: 'Hospital Site (Figma Design)',
 		desc: 'A hospital management website with features like appointment booking, doctor profiles, and patient records. Designed in Figma with a clean, modern UI.',
-		image: hospitalImg, // Replace with a relevant image from your Figma design
+		image: hospitalImg,
 	},
 ];
 
+// Component to display individual project card with animation
 const ProjectCard = ({ project }) => (
 	<motion.div
-		whileHover={{ scale: 1.05 }}
-		whileTap={{ scale: 0.95 }}
-		initial={{ opacity: 0, y: 50 }}
-		whileInView={{ opacity: 1, y: 0 }}
-		viewport={{ once: true }}
-		transition={{ duration: 0.6, ease: 'easeOut' }}
+		whileHover={{ scale: 1.05 }} // Slight zoom on hover
+		whileTap={{ scale: 0.95 }} // Slight shrink on tap
+		initial={{ opacity: 0, y: 50 }} // Fade-in from below
+		whileInView={{ opacity: 1, y: 0 }} // Animate into view
+		viewport={{ once: true }} // Animation only triggers once
+		transition={{ duration: 0.6, ease: 'easeOut' }} // Smooth transition
 		className="bg-white/40 backdrop-blur-md border border-gray-200 shadow-lg rounded-2xl overflow-hidden flex flex-col justify-between hover:shadow-2xl transition-all"
 	>
+		{/* Project image */}
 		<div className="overflow-hidden">
 			<img
 				src={project.image}
@@ -68,37 +74,48 @@ const ProjectCard = ({ project }) => (
 				className="w-full h-52 object-cover hover:scale-110 transition-transform duration-500"
 			/>
 		</div>
+
+		{/* Project details */}
 		<div className="p-6 flex flex-col flex-grow">
 			<h3 className="text-2xl font-semibold text-primary-dark mb-3">
 				{project.title}
 			</h3>
 			<p className="text-gray-700 mb-4 flex-grow">{project.desc}</p>
-			<div className="mt-4 flex justify-end">
-				<a
-					href={project.github}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="inline-flex items-center gap-2 text-primary-dark text-xs hover:text-primary  font-medium transition"
-				>
-					<FaGithub className="text-xl" />
-					View Code
-				</a>
-			</div>
+
+			{/* GitHub link shown only if it exists */}
+			{project.github && (
+				<div className="mt-4 flex justify-end">
+					<a
+						href={project.github}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex items-center gap-2 text-primary-dark text-xs hover:text-primary font-medium transition"
+					>
+						<FaGithub className="text-xl" />
+						View Code
+					</a>
+				</div>
+			)}
 		</div>
 	</motion.div>
 );
 
+// Main Project section component
 const Project = () => {
 	return (
 		<div className="max-w-7xl mx-auto text-center">
+			{/* Section Heading */}
 			<h2 className="text-4xl font-extrabold text-primary-dark mb-8">
 				Projects
 			</h2>
+
+			{/* Intro Text */}
 			<p className="text-gray-600 mb-16 max-w-2xl mx-auto">
 				Explore some of the impactful projects I've crafted, combining
 				design and development expertise.
 			</p>
 
+			{/* Grid layout of project cards */}
 			<div className="grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 				{projectList.map((project, idx) => (
 					<ProjectCard key={idx} project={project} />

@@ -33,13 +33,6 @@ const Footer = () => {
 						<FaEnvelope className="text-2xl hover:text-white transition" />
 					</a>
 				</div>
-
-				<hr className="border-gray-700 my-4" />
-
-				<p className="text-xs text-gray-500">
-					&copy; {new Date().getFullYear()} Anjali Singh. All rights
-					reserved.
-				</p>
 			</div>
 		</footer>
 	);
