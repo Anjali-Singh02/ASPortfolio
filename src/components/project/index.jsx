@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa6'; // GitHub icon from react-icons
 
 // Import images for projects
 import portfolioImg from '../../../public/portfolio.png';
-import stuTeacherBooking from '../../../public/stTeBk.png';
+import stuTeacherBooking from '../../../public/stTeBke.png';
 import event from '../../../public/event.png';
 import blogpost from '../../../public/blogpost.png';
 import ecomm from '../../../public/ecomm.png';
@@ -22,31 +22,31 @@ const projectList = [
 		title: 'Portfolio Website',
 		desc: 'A personal portfolio to showcase my work, skills, and contact information. Designed with a modern, responsive UI using React and Tailwind CSS.',
 		image: portfolioImg,
-		github: 'https://github.com/yourname/portfolio',
+		github: 'https://github.com/Anjali-Singh02/ASPortfolio.git',
 	},
 	{
 		title: 'Event Management',
 		desc: 'An app to manage and display events. Features real-time data fetching and sorting. Built with React and styled using Tailwind CSS.',
 		image: event,
-		github: 'https://github.com/yourname/event-management',
+		github: 'https://github.com/Anjali-Singh02/Event-Management.git',
 	},
 	{
 		title: 'Blog Post',
 		desc: 'A blogging platform to create and manage blog posts. Built with React and focused on an intuitive, user-friendly UI.',
 		image: blogpost,
-		github: 'https://github.com/yourname/blog-post',
+		// github: 'https://github.com/yourname/blog-post',
 	},
 	{
 		title: 'E-commerce Store (In Progress)',
 		desc: 'A demo e-commerce store with product listings, cart functionality, and a checkout page. Currently under development with React and Tailwind CSS.',
 		image: ecomm,
-		github: 'https://github.com/yourname/ecommerce-store',
+		// github: 'https://github.com/yourname/ecommerce-store',
 	},
 	{
 		title: 'School Site (In Progress)',
 		desc: 'A school-related website with features for students and teachers. Currently under development with React and Tailwind CSS for styling.',
 		image: school,
-		github: 'https://github.com/yourname/school-site',
+		// github: 'https://github.com/yourname/school-site',
 	},
 	{
 		title: 'Hospital Site (Figma Design)',

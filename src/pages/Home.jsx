@@ -47,6 +47,13 @@ function Home() {
 
 		return () => clearTimeout(timeout);
 	}, [charIndex, typing, roleIndex]);
+	// Smooth scroll handler
+	const scrollToSection = (id) => {
+		const section = document.getElementById(id);
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+	};
 
 	const buttonBase =
 		'flex items-center gap-2 font-semibold py-2 px-6 rounded shadow transition capitalize';
@@ -106,13 +113,13 @@ function Home() {
 							Download Resume
 						</a>
 
-						<a
-							href="#contact"
-							className={`${buttonBase} bg-white text-primary-dark hover:bg-primary-dark hover:text-white`}
+						<button
+							onClick={() => scrollToSection('contact')}
+							className={`${buttonBase} bg-white text-primary-dark hover:bg-primary-dark hover:text-white cursor-pointer`}
 						>
 							<MdConnectWithoutContact className="w-5 h-5" />
 							Let's Connect
-						</a>
+						</button>
 					</div>
 				</div>
 			</section>

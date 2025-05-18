@@ -5,6 +5,7 @@ import { IoClose, IoHomeOutline, IoMailOutline } from 'react-icons/io5';
 import { FaRegUser } from 'react-icons/fa6';
 import { GrProjects } from 'react-icons/gr';
 import { BsLayoutTextSidebarReverse } from 'react-icons/bs';
+import { GiSkills } from 'react-icons/gi';
 
 function Header({ collapsed, setCollapsed }) {
 	const [open, setOpen] = useState(false);
@@ -13,6 +14,7 @@ function Header({ collapsed, setCollapsed }) {
 		{ to: 'home', label: 'Home', icon: <IoHomeOutline /> },
 		{ to: 'about', label: 'About', icon: <FaRegUser /> },
 		{ to: 'projects', label: 'Projects', icon: <GrProjects /> },
+		{ to: 'skills', label: 'Skills', icon: <GiSkills /> },
 		{ to: 'contact', label: 'Contact', icon: <IoMailOutline /> },
 	];
 

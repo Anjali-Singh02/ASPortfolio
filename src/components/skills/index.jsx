@@ -15,14 +15,14 @@ const skills = [
 		Icon: FaReact,
 		title: 'Frontend',
 		description:
-			'React.js, Redux Toolkit, React Router, HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS, Material UI',
+			'React.js, React Router, HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS, Material UI',
 		iconColor: 'text-blue-500',
 		textColor: 'text-gray-600',
 	},
 	{
 		Icon: FaNodeJs,
 		title: 'Backend',
-		description: 'Node.js (Basics), Express.js',
+		description: 'Node.js (Basics), Express.js (Basics)',
 		iconColor: 'text-green-600',
 		textColor: 'text-gray-600',
 	},
@@ -36,7 +36,7 @@ const skills = [
 	{
 		Icon: FaDatabase,
 		title: 'Database',
-		description: 'MongoDB, MySQL, SQL',
+		description: 'MongoDB, MySQL (Basics), SQL (Basics)',
 		iconColor: 'text-yellow-500',
 		textColor: 'text-gray-600',
 	},
