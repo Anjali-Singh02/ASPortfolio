@@ -31,7 +31,7 @@ function Header({ collapsed, setCollapsed }) {
 		<>
 			{/* Mobile Toggle Button */}
 			<div className="md:hidden fixed top-0 left-0 right-0 z-40 p-4 flex justify-between items-center bg-primary-dark text-white transition-all duration-300">
-				<h1 className="text-3xl font-bold">AS</h1>
+				<h1 className="AS-logo text-3xl font-bold">AS</h1>
 				<button
 					onClick={() => setOpen(!open)}
 					className="cursor-pointer transition-all duration-300"
@@ -46,7 +46,7 @@ function Header({ collapsed, setCollapsed }) {
 					open ? 'translate-x-0' : '-translate-x-full'
 				} md:hidden`}
 			>
-				<h1 className="text-3xl font-bold mb-8">AS</h1>
+				<h1 className="AS-logo text-3xl font-bold mb-8">AS</h1>
 				<ul className="space-y-4">
 					{navItems.map((item) => (
 						<li key={item.to} className="text-xl leading-12">
@@ -69,7 +69,14 @@ function Header({ collapsed, setCollapsed }) {
 				}`}
 			>
 				<div className="flex justify-between items-center mb-8">
-					{!collapsed && <h1 className="text-3xl font-bold">AS</h1>}
+					{!collapsed && (
+						<h1
+							className="
+					AS-logo text-3xl font-bold"
+						>
+							AS
+						</h1>
+					)}
 					<button
 						onClick={() => setCollapsed(!collapsed)}
 						className="cursor-pointer"

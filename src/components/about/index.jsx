@@ -28,52 +28,67 @@ const timelineItems = [
 		position: 'right',
 		content: (
 			<div className="text-gray-700 text-base">
-				{/* Freelance Frontend Developer */}
+				{/* Freelance UI/UX & Frontend Developer */}
 				<h4 className="font-bold text-primary-dark">
-					Freelance Frontend Developer
+					Freelance UI/UX & Frontend Developer – Web & Mobile
+					Applications
 				</h4>
 				<p className="italic text-sm mb-2">
-					Jan 2025 – Feb 2025 (Remote)
+					Jan 2025 – Present (Remote)
 				</p>
-				<ul className="list-disc list-inside space-y-1 mb-4">
+				<ul className="list-disc list-inside space-y-2 mb-4">
 					<li>
-						Collaborated on an ongoing client project to improve and
-						modernize UI elements.
+						<strong>
+							Hospital Web Application (June 2025 – Present):
+						</strong>{' '}
+						<ul className="px-4 list-inside space-y-1">
+							<li>
+								- Leading UI/UX design and frontend development
+								using React and Tailwind CSS.
+							</li>
+							<li>
+								- Building responsive and mobile-friendly user
+								interfaces.
+							</li>
+							<li>
+								- Designing intuitive user workflows for patient
+								and doctor interactions.
+							</li>
+							<li>
+								- Developing scalable and reusable components
+								tailored to healthcare needs.
+							</li>
+						</ul>
 					</li>
 					<li>
-						Updated layouts and components using HTML, CSS, and
-						JavaScript for better responsiveness.
+						<strong>Hospital Website (Oct – Nov 2025):</strong>
+						<ul className="px-4 list-inside space-y-1">
+							<li>
+								- Designed a complete hospital website using
+								Figma.
+							</li>
+							<li>
+								- Developed high-fidelity wireframes and
+								prototypes for key features such as appointment
+								booking, doctor listings, and contact forms with
+								a focus on accessibility and mobile-first
+								design.
+							</li>
+						</ul>
 					</li>
 					<li>
-						Ensured design consistency and performance optimization
-						across major browsers.
-					</li>
-					<li>
-						Worked directly with clients to gather feedback and
-						iterate design changes.
+						<strong>Jainsons Web Application (Jan 2025):</strong>{' '}
+						<ul className="px-4 list-inside space-y-1">
+							<li>
+								- Improved the UI of an existing web application
+								by refining layouts, enhancing responsiveness,
+								and standardizing visual components for a
+								consistent user experience.
+							</li>
+						</ul>
 					</li>
 				</ul>
-				{/* Freelance UI/UX Designer */}
-				<h4 className="font-bold text-primary-dark">
-					Freelance UI/UX Designer – Hospital Website (Figma)
-				</h4>
-				<p className="italic text-sm mb-2">
-					Oct 2025 – Nov 2025 (Remote)
-				</p>
-				<ul className="list-disc list-inside space-y-1 mb-4">
-					<li>
-						Designed a complete hospital website interface using
-						Figma focused on clean, user-friendly layouts.
-					</li>
-					<li>
-						Built high-fidelity prototypes and wireframes for
-						appointment booking, doctor profiles, and contact pages.
-					</li>
-					<li>
-						Applied mobile-first and accessibility best practices in
-						UI design.
-					</li>
-				</ul>{' '}
+
 				{/* Menteechain Consultancy */}
 				<h4 className="font-bold text-primary-dark">
 					Menteechain Consultancy
