@@ -61,7 +61,7 @@ const timelineItems = [
 						</ul>
 					</li>
 					<li>
-						<strong>Hospital Website (Oct – Nov 2025):</strong>
+						<strong>Hospital Website (Oct – Nov 2024):</strong>
 						<ul className="px-4 list-inside space-y-1">
 							<li>
 								- Designed a complete hospital website using
